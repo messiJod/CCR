@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+
+.rv_modal_wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #555454;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rv_modal {
+  width: 20rem;
+  border: 1px solid red;
+}

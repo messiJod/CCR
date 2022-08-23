@@ -1,17 +1,157 @@
 body {
   margin: 0;
+  font-family: Inter;
 }
 
 .rv_modal_wrapper {
+  position: fixed;
   width: 100%;
   min-height: 100vh;
-  background-color: #555454;
+  background-image: radial-gradient(#545454, #545454b0);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .rv_modal {
-  width: 20rem;
-  border: 1px solid red;
+  max-width: 30rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 5px solid #1faee9;
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.rv_modal_body h2 {
+  text-transform: uppercase;
+  font-family: Bebas Neue;
+  letter-spacing: 8px;
+  color: #186abc;
+  font-size: 30px;
+}
+
+.rv_modal_header img {
+  width: 80px;
+  aspect-ratio: 1;
+  display: block;
+  margin: 0 auto;
+}
+.congratsMessage {
+  animation: fadein 2s forwards 1 ease-in-out;
+}
+@keyframes fadein {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  40%,
+  60% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+}
+
+.question.first,
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  opacity: 0;
+  margin-block: 0.5em;
+  padding: 10px 40px;
+  border-radius: 4px;
+  background: #ffffff;
+  transition: transform 1s;
+}
+
+.fadeinbottom {
+  animation: fadinbottom 700ms 1s 1 forwards ease-in-out;
+}
+
+@keyframes fadinbottom {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+}
+
+.fadeinbottom2 {
+  animation: fadinbottom2 700ms 1 forwards ease-in-out;
+}
+
+@keyframes fadinbottom2 {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-100px);
+  }
+}
+
+.fadeoutbottom {
+  animation: fadeoutbottom 700ms 1 forwards ease-in-out;
+}
+@keyframes fadeoutbottom {
+  0% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.query {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.buttons_container {
+  display: flex;
+  gap: 1rem;
+}
+
+.custom_btn {
+  padding: 6px 16px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 1em;
+  background-color: #f2f2f2;
+  color: black;
+  cursor: pointer;
+}
+
+.yes,
+.no {
+  transition: 0.3s all;
+}
+.yes {
+  color: rgb(101 163 13);
+}
+.no {
+  color: rgb(226, 36, 27);
+}
+
+.yes:hover,
+.yes:focus {
+  background-color: rgb(101 163 13);
+  color: white;
+}
+
+.no:hover,
+.no:focus {
+  background-color: rgb(226, 36, 27);
+  color: white;
 }

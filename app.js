@@ -26,7 +26,7 @@ radio_buttons.forEach((button) => {
   button.addEventListener("click", function () {
     footerCloseBtn.style.display = "block";
     rating = parseInt(button.getAttribute("data-rating"));
-    document.cookie = "rating=" + rating;
+    // document.cookie = "rating=" + rating;
     if (rating === 1) {
       ratingMessage.innerHTML = "Oh No! Please let us know what went wrong!";
     } else if (rating === 2) {
@@ -51,4 +51,16 @@ radio_buttons.forEach((button) => {
 });
 footerCloseBtn.addEventListener("click", function () {
   document.querySelector(".rv_modal_wrapper").style.display = "none";
+  document.cookie = "close=true";
 });
+
+(function () {
+  let cookieArray = document.cookie.split(";");
+  console.log(cookieArray);
+  cookieArray.forEach((cookie) =>
+    cookie.search("close=") ? console.log("yes") : console.log("no")
+  );
+  if (document.cookie == "close=true") {
+    document.querySelector(".rv_modal_wrapper").style.display = "none";
+  }
+})();

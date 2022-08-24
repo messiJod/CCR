@@ -69,6 +69,7 @@ body {
   border-radius: 4px;
   background: #ffffff;
   transition: transform 1s;
+  /* border: 1px solid #fff; */
 }
 
 .fadeinbottom {
@@ -339,4 +340,10 @@ div#ratingMessage {
   color: white;
   padding: 8px 36px;
   margin-top: 10px;
+}
+
+.buttons_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

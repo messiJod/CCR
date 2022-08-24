@@ -7,20 +7,24 @@ let ratingQuestion = document.querySelector(".rating");
 let ratingContainer = document.querySelector(".rv_container");
 let radio_buttons = document.querySelectorAll(".rv_rating input[type=radio]");
 let ratingMessage = document.querySelector("#ratingMessage");
+let footerCloseBtn = document.querySelector(".cz_rv_btn");
 
 redirectionTrueBtn.addEventListener("click", function () {
   firstQuestion.classList.remove("fadeinbottom");
   firstQuestion.classList.add("fadeoutbottom");
+  ratingQuestion.style.display = "flex";
   ratingQuestion.classList.add("fadeinbottom2");
 });
 
 reviewTrueBtn.addEventListener("click", function () {
   ratingQuestion.classList.add("fadeoutbottom2");
+  ratingContainer.style.display = "flex";
   ratingContainer.classList.add("fadeinbottom_rating");
 });
 
 radio_buttons.forEach((button) => {
   button.addEventListener("click", function () {
+    footerCloseBtn.style.display = "block";
     rating = parseInt(button.getAttribute("data-rating"));
     document.cookie = "rating=" + rating;
     if (rating === 1) {
@@ -44,4 +48,7 @@ radio_buttons.forEach((button) => {
       ratingMessage.innerHTML = "We are overjoyed. You just made our day.";
     }
   });
+});
+footerCloseBtn.addEventListener("click", function () {
+  document.querySelector(".rv_modal_wrapper").style.display = "none";
 });

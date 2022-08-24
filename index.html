@@ -40,7 +40,7 @@
                   <i class="fas fa-times"></i>
               </div>
               </div>
-            <div class="question rating">
+            <div class="question rating" style="display:none">
               <div class="query">Would you like to rate our Service?</div>
               <div class="buttons_container">
                 <button class="custom_btn yes" data-trigger="rating">
@@ -50,7 +50,7 @@
                   <i class="fas fa-times"></i>
               </div>
               </div>
-              <div class="rv_container">
+              <div class="rv_container" style="display: none">
                 <div class="rv_feedback">
                     <div class="rv_rating">
                         <input type="radio" name="rv_rating" id="rv_rating-5" data-rating=5 />
@@ -328,13 +328,13 @@
                         </div>
                     </div>
                     <div id="ratingMessage"></div>
+                    <button class="custom_btn cz_rv_btn" style="display:none">Close</button>
                 </div>
             </div>
-            
-
             </div>
+            <div class="rv_modal_footer">
             </div>
-        <div class="rv_modal_footer"></div>
+          </div>
       </div>
     </div>
     <script src="app.js"></script>

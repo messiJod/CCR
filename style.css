@@ -15,7 +15,7 @@ body {
 
 .rv_modal {
   max-width: 30rem;
-  max-height: 24rem;
+  max-height: 25rem;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.9);
   border: 5px solid #1faee9;
@@ -323,4 +323,8 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+}
+
+div#ratingMessage {
+  margin-top: 0.5rem;
 }

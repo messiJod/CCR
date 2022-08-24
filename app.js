@@ -33,13 +33,13 @@ radio_buttons.forEach((button) => {
         "Thank you.<br> Please share some feedback for us to work on.";
     } else if (rating === 4) {
       let location =
-        "https://apps.shopify.com/cozy-antitheft-for-images-and-more?utm_source=ask-review&#modal-show=ReviewListingModal&utm_medium=Review%20Modal";
+        "https://apps.shopify.com/cozy-country-redirect?#modal-show=ReviewListingModal";
       window.open(location);
       ratingMessage.innerHTML =
         "We are grateful. Let us know what we should improve.";
     } else if (rating === 5) {
       let location =
-        "https://apps.shopify.com/cozy-antitheft-for-images-and-more?utm_source=ask-review&#modal-show=ReviewListingModal&utm_medium=Review%20Modal";
+        "https://apps.shopify.com/cozy-country-redirect?#modal-show=ReviewListingModal";
       window.open(location);
       ratingMessage.innerHTML = "We are overjoyed. You just made our day.";
     }

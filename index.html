@@ -46,9 +46,16 @@
                 <button class="custom_btn yes" data-trigger="rating">
                   <i class="fas fa-check "></i>
                 </button>
-                <button class="custom_btn no">
+                <button class="custom_btn no" data-trigger="lasttry">
                   <i class="fas fa-times"></i>
               </div>
+              </div>
+              <div class="question lasttry" style="display:none">
+                <div class="message">Many businesses like yours rely on internet reviews to ensure they receive the finest service possible</div>
+                <div class="buttons_container">
+                    <a class="custom_btn review_link" target="_blank" href="https://apps.shopify.com/cozy-country-redirect?#modal-show=ReviewListingModal">Leave a Review</a>
+                    <button class="custom_btn close_btn">Close Anyway</button>
+                </div>
               </div>
               <div class="rv_container" style="display: none">
                 <div class="rv_feedback">
@@ -328,7 +335,6 @@
                         </div>
                     </div>
                     <div id="ratingMessage"></div>
-                    
                       <!-- <button class="custom_btn cz_rv_btn" style="display:none">Contact</button> -->
                       <button class="custom_btn cz_rv_btn" style="display:none">Close</button>
 

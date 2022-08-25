@@ -1,6 +1,8 @@
 let redirectionTrueBtn = document.querySelector(
   "button[data-trigger='reviewQ']"
 );
+let buttonLast = document.querySelector("button[data-trigger='lasttry']");
+let lastTryModal = document.querySelector(".question.lasttry");
 let reviewTrueBtn = document.querySelector("button[data-trigger='rating'");
 let firstQuestion = document.querySelector(".question.first");
 let ratingQuestion = document.querySelector(".rating");
@@ -8,6 +10,8 @@ let ratingContainer = document.querySelector(".rv_container");
 let radio_buttons = document.querySelectorAll(".rv_rating input[type=radio]");
 let ratingMessage = document.querySelector("#ratingMessage");
 let footerCloseBtn = document.querySelector(".cz_rv_btn");
+let reviewWrapper = document.querySelector(".rv_modal_wrapper");
+let modalClose = document.querySelector(".custom_btn.close_btn");
 
 redirectionTrueBtn.addEventListener("click", function () {
   firstQuestion.classList.remove("fadeinbottom");
@@ -20,6 +24,12 @@ reviewTrueBtn.addEventListener("click", function () {
   ratingQuestion.classList.add("fadeoutbottom2");
   ratingContainer.style.display = "flex";
   ratingContainer.classList.add("fadeinbottom_rating");
+});
+
+buttonLast.addEventListener("click", function () {
+  ratingQuestion.classList.add("fadeoutbottom2");
+  lastTryModal.style.display = "flex";
+  lastTryModal.classList.add("translateLastTry");
 });
 
 radio_buttons.forEach((button) => {
@@ -50,17 +60,21 @@ radio_buttons.forEach((button) => {
   });
 });
 footerCloseBtn.addEventListener("click", function () {
-  document.querySelector(".rv_modal_wrapper").style.display = "none";
-  document.cookie = "close=true";
+  reviewWrapper.style.display = "none";
+  // document.cookie = "close=true";
 });
 
-(function () {
-  let cookieArray = document.cookie.split(";");
-  console.log(cookieArray);
-  cookieArray.forEach((cookie) =>
-    cookie.search("close=") ? console.log("yes") : console.log("no")
-  );
-  if (document.cookie == "close=true") {
-    document.querySelector(".rv_modal_wrapper").style.display = "none";
-  }
-})();
+modalClose.addEventListener("click", function () {
+  reviewWrapper.style.display = "none";
+});
+
+// (function () {
+//   let cookieArray = document.cookie.split(";");
+//   console.log(cookieArray);
+//   cookieArray.forEach((cookie) =>
+//     cookie.search("close=") ? console.log("yes") : console.log("no")
+//   );
+//   if (document.cookie == "close=true") {
+//     reviewWrapper.style.display = "none";
+//   }
+// })();
